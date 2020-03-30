@@ -12,4 +12,5 @@ public interface ICityBusiness {
 	
 	public CityDTO consultarCiudad(Long id);	
 	
+	public Boolean borrarCiudad(Long id);	
 }

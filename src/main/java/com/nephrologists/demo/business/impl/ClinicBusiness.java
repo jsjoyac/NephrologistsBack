@@ -41,5 +41,10 @@ public class ClinicBusiness implements IClinicBusiness{
 		ClinicModel ClinicModel = iClinicService.save(ClinicFacade.obtenerClinicModel(ClinicDTO));
 		return ClinicFacade.obtenerClinicDTO(ClinicModel);
 	}
+
+	@Override
+	public Boolean borrarClinica(Long id) {
+		return iClinicService.deleteById(id);	
+	}
 	
 }

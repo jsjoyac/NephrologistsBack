@@ -41,5 +41,10 @@ public class UserBusiness implements IUserBusiness{
 		UserModel UserModel = iUserService.save(UserFacade.obtenerUserModel(UserDTO));
 		return UserFacade.obtenerUserDTO(UserModel);
 	}
+
+	@Override
+	public Boolean borrarUsuario(Long id) {
+		return iUserService.deleteById(id);	
+	}
 	
 }

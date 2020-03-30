@@ -12,4 +12,5 @@ public interface IClinicTypeBusiness {
 	
 	public ClinicTypeDTO consultarTipoClinica(Long id);	
 	
+	public Boolean borrarTipoClinica(Long id);	
 }

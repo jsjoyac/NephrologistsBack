@@ -9,5 +9,6 @@ public interface IZoneService {
 	public List<ZoneModel> findAll();
 	public ZoneModel findById(Long id);
 	public ZoneModel save(ZoneModel entity);
+	public Boolean deleteById(Long id);
 	
 }

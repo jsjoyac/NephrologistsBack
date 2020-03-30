@@ -42,4 +42,9 @@ public class ZoneBusiness implements IZoneBusiness{
 		return ZoneFacade.obtenerZoneDTO(ZoneModel);
 	}
 	
+	@Override
+	public Boolean borrarZona(Long id) {
+		return iZoneService.deleteById(id);		
+	}
+	
 }

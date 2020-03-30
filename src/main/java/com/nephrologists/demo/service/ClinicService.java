@@ -11,10 +11,8 @@ import com.nephrologists.demo.service.interfaces.IClinicService;
 
 @Component
 public class ClinicService implements IClinicService{
-	
-	
-	private IClinicRepository repository;
-	
+		
+	private IClinicRepository repository;	
 	
 	@Autowired
 	public ClinicService(IClinicRepository repository) {
@@ -35,6 +33,18 @@ public class ClinicService implements IClinicService{
 	@Override
 	public ClinicModel save(ClinicModel entity) {
 		return repository.save(entity);
+	}
+
+	@Override
+	public Boolean deleteById(Long id) {
+		Boolean rta=true;
+		try {
+			repository.deleteById(id);
+		}catch(Exception e) {
+			e.getMessage();
+			rta=false;
+		}
+		return rta;
 	}
 
 }

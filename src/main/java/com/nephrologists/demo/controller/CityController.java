@@ -45,4 +45,14 @@ public class CityController {
 		return new ResponseEntity<CityDTO>(iCityBusiness.guardarCiudad(CityDTO), HttpStatus.OK);
 	}
 	
+	@GetMapping(value="/borrar/{id}")
+	public ResponseEntity<String> deleteById(@PathVariable("id") Long id) {
+		String rta="";
+		if(iCityBusiness.borrarCiudad(id)) {
+			rta="Borrado exitoso para el id: "+id;
+		}else {
+			rta="Error en el Borrado para el id: "+id;
+		}
+		return new ResponseEntity<String>(rta, HttpStatus.OK);
+	}
 }

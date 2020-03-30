@@ -14,8 +14,7 @@ import com.nephrologists.demo.service.interfaces.ICityService;
 
 @Service
 public class CityBusiness implements ICityBusiness{
-	
-	
+		
 	private ICityService iCityService;
 	
 	@Autowired
@@ -43,7 +42,9 @@ public class CityBusiness implements ICityBusiness{
 		return cityFacade.obtenerCityDTO(cityModel);
 	}
 
-
-	
+	@Override
+	public Boolean borrarCiudad(Long id) {
+		return iCityService.deleteById(id);	
+	}
 	
 }

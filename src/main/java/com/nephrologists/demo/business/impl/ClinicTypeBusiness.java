@@ -42,5 +42,10 @@ public class ClinicTypeBusiness implements IClinicTypeBusiness{
 				ClinicTypeFacade.obtenerClinicTypeModel(ClinicTypeDTO));
 		return ClinicTypeFacade.obtenerClinicTypeDTO(ClinicTypeModel);
 	}
+
+	@Override
+	public Boolean borrarTipoClinica(Long id) {
+		return iClinicTypeService.deleteById(id);	
+	}
 	
 }

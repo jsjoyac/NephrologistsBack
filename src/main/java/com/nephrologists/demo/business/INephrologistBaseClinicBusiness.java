@@ -12,4 +12,5 @@ public interface INephrologistBaseClinicBusiness {
 	
 	public NephrologistBaseClinicDTO consultarNefrologoBaseClinica(Long id);	
 	
+	public Boolean borrarNefrologoBaseClinica(Long id);	
 }

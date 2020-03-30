@@ -9,6 +9,7 @@ public interface ICityService {
 	public List<CityModel> findAll();
 	public CityModel findById(Long id);
 	public CityModel save(CityModel entity);
+	public Boolean deleteById(Long id);
 	
 }
  

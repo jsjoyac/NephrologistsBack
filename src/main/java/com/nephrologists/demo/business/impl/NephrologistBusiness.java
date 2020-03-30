@@ -41,5 +41,10 @@ public class NephrologistBusiness implements INephrologistBusiness{
 		NephrologistModel NephrologistModel = iNephrologistService.save(NephrologistFacade.obtenerNephrologistModel(NephrologistDTO));
 		return NephrologistFacade.obtenerNephrologistDTO(NephrologistModel);
 	}
+
+	@Override
+	public Boolean borrarNefrologo(Long id) {
+		return iNephrologistService.deleteById(id);	
+	}
 	
 }

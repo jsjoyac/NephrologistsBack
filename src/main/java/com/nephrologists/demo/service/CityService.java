@@ -11,10 +11,8 @@ import com.nephrologists.demo.service.interfaces.ICityService;
 
 @Component
 public class CityService implements ICityService{
-	
-	
-	private ICityRepository repository;
-	
+		
+	private ICityRepository repository;	
 	
 	@Autowired
 	public CityService(ICityRepository repository) {
@@ -35,6 +33,18 @@ public class CityService implements ICityService{
 	@Override
 	public CityModel save(CityModel entity) {
 		return repository.save(entity);
+	}
+
+	@Override
+	public Boolean deleteById(Long id) {
+		Boolean rta=true;
+		try {
+			repository.deleteById(id);
+		}catch(Exception e) {
+			e.getMessage();
+			rta=false;
+		}
+		return rta;
 	}
 
 }

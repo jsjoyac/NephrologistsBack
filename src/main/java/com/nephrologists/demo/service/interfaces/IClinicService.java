@@ -9,5 +9,5 @@ public interface IClinicService {
 	public List<ClinicModel> findAll();
 	public ClinicModel findById(Long id);
 	public ClinicModel save(ClinicModel entity);
-		
+	public Boolean deleteById(Long id);	
 }

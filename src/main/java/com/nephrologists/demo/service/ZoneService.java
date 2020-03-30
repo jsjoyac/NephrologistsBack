@@ -36,5 +36,17 @@ public class ZoneService implements IZoneService{
 	public ZoneModel save(ZoneModel entity) {
 		return repository.save(entity);
 	}
+	
+	@Override
+	public Boolean deleteById(Long id) {
+		Boolean rta=true;
+		try {
+			repository.deleteById(id);
+		}catch(Exception e) {
+			e.getMessage();
+			rta=false;
+		}
+		return rta;
+	}
 
 }

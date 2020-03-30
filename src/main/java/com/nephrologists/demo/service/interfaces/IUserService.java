@@ -9,6 +9,6 @@ public interface IUserService {
 	public List<UserModel> findAll();
 	public UserModel findById(Long id);
 	public UserModel save(UserModel entity);
-	
+	public Boolean deleteById(Long id);
 
 }

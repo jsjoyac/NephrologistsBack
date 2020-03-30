@@ -45,4 +45,14 @@ public class ClinicTypeController {
 		return new ResponseEntity<ClinicTypeDTO>(iClinicTypeBusiness.guardarTipoClinica(ClinicTypeDTO), HttpStatus.OK);
 	}
 	
+	@GetMapping(value="/borrar/{id}")
+	public ResponseEntity<String> deleteById(@PathVariable("id") Long id) {
+		String rta="";
+		if(iClinicTypeBusiness.borrarTipoClinica(id)) {
+			rta="Borrado exitoso para el id: "+id;
+		}else {
+			rta="Error en el Borrado para el id: "+id;
+		}
+		return new ResponseEntity<String>(rta, HttpStatus.OK);
+	}
 }

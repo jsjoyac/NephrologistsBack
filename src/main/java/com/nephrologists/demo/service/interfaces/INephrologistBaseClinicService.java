@@ -9,6 +9,6 @@ public interface INephrologistBaseClinicService {
 	public List<NephrologistBaseClinicModel> findAll();
 	public NephrologistBaseClinicModel findById(Long id);
 	public NephrologistBaseClinicModel save(NephrologistBaseClinicModel entity);
-	
+	public Boolean deleteById(Long id);
 
 }

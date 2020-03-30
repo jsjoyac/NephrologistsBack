@@ -3,9 +3,7 @@ package com.nephrologists.demo.business.facade;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.nephrologists.demo.dto.CityDTO;
 import com.nephrologists.demo.dto.ClinicDTO;
-import com.nephrologists.demo.model.CityModel;
 import com.nephrologists.demo.model.ClinicModel;
 
 public class ClinicFacade {

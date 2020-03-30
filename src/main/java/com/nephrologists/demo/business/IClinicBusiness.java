@@ -12,4 +12,5 @@ public interface IClinicBusiness {
 	
 	public ClinicDTO consultarClinica(Long id);	
 	
+	public Boolean borrarClinica(Long id);	
 }

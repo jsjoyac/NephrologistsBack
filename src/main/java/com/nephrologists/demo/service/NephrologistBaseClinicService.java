@@ -11,10 +11,8 @@ import com.nephrologists.demo.service.interfaces.INephrologistBaseClinicService;
 
 @Component
 public class NephrologistBaseClinicService implements INephrologistBaseClinicService{
-	
-	
-	private INephrologistBaseClinicRepository repository;
-	
+		
+	private INephrologistBaseClinicRepository repository;	
 	
 	@Autowired
 	public NephrologistBaseClinicService(INephrologistBaseClinicRepository repository) {
@@ -35,6 +33,18 @@ public class NephrologistBaseClinicService implements INephrologistBaseClinicSer
 	@Override
 	public NephrologistBaseClinicModel save(NephrologistBaseClinicModel entity) {
 		return repository.save(entity);
+	}
+
+	@Override
+	public Boolean deleteById(Long id) {
+		Boolean rta=true;
+		try {
+			repository.deleteById(id);
+		}catch(Exception e) {
+			e.getMessage();
+			rta=false;
+		}
+		return rta;
 	}
 
 }

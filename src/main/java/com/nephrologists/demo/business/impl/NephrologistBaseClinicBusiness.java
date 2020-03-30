@@ -44,5 +44,10 @@ public class NephrologistBaseClinicBusiness implements INephrologistBaseClinicBu
 				NephrologistBaseClinicFacade.obtenerNephrologistBaseClinicModel(NephrologistBaseClinicDTO));
 		return NephrologistBaseClinicFacade.obtenerNephrologistBaseClinicDTO(NephrologistBaseClinicModel);
 	}
+
+	@Override
+	public Boolean borrarNefrologoBaseClinica(Long id) {
+		return iNephrologistBaseClinicService.deleteById(id);	
+	}
 	
 }

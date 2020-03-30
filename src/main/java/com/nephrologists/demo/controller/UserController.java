@@ -45,4 +45,15 @@ public class UserController {
 		return new ResponseEntity<UserDTO>(iUserBusiness.guardarUsuario(UserDTO), HttpStatus.OK);
 	}
 	
+	@GetMapping(value="/borrar/{id}")
+	public ResponseEntity<String> deleteById(@PathVariable("id") Long id) {
+		String rta="";
+		if(iUserBusiness.borrarUsuario(id)) {
+			rta="Borrado exitoso para el id: "+id;
+		}else {
+			rta="Error en el Borrado para el id: "+id;
+		}
+		return new ResponseEntity<String>(rta, HttpStatus.OK);
+	}
+	
 }

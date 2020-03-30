@@ -11,10 +11,8 @@ import com.nephrologists.demo.service.interfaces.IUserService;
 
 @Component
 public class UserService implements IUserService{
-	
-	
-	private IUserRepository repository;
-	
+		
+	private IUserRepository repository;	
 	
 	@Autowired
 	public UserService(IUserRepository repository) {
@@ -35,6 +33,18 @@ public class UserService implements IUserService{
 	@Override
 	public UserModel save(UserModel entity) {
 		return repository.save(entity);
+	}
+
+	@Override
+	public Boolean deleteById(Long id) {
+		Boolean rta=true;
+		try {
+			repository.deleteById(id);
+		}catch(Exception e) {
+			e.getMessage();
+			rta=false;
+		}
+		return rta;
 	}
 
 }

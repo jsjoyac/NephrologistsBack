@@ -10,6 +10,8 @@ public interface IZoneBusiness {
 	
 	public List<ZoneDTO> consultarZonas();
 	
-	public ZoneDTO consultarZona(Long id);	
+	public ZoneDTO consultarZona(Long id);
+
+	public Boolean borrarZona(Long id);	
 	
 }

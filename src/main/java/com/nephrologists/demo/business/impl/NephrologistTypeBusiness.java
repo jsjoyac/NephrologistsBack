@@ -43,5 +43,10 @@ public class NephrologistTypeBusiness implements INephrologistTypeBusiness{
 				NephrologistTypeFacade.obtenerNephrologistTypeModel(NephrologistTypeDTO));
 		return NephrologistTypeFacade.obtenerNephrologistTypeDTO(NephrologistTypeModel);
 	}
+
+	@Override
+	public Boolean borrarTipoNefrologo(Long id) {
+		return iNephrologistTypeService.deleteById(id);	
+	}
 	
 }

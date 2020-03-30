@@ -12,4 +12,5 @@ public interface INephrologistBusiness {
 	
 	public NephrologistDTO consultarNefrologo(Long id);	
 	
+	public Boolean borrarNefrologo(Long id);	
 }

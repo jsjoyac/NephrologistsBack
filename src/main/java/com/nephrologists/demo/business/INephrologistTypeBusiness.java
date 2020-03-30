@@ -11,5 +11,6 @@ public interface INephrologistTypeBusiness {
 	public List<NephrologistTypeDTO> consultarTipoNefrologos();
 	
 	public NephrologistTypeDTO consultarTipoNefrologo(Long id);	
-	
+
+	public Boolean borrarTipoNefrologo(Long id);	
 }
