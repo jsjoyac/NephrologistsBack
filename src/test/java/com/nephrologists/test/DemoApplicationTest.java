@@ -1,10 +1,10 @@
-package com.tarjetascredito.demo;
+package com.nephrologists.test;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TarjetasCreditoDemoApplicationTests {
+class DemoApplicationTest {
 
 	@Test
 	void contextLoads() {
