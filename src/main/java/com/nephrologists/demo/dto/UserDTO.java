@@ -7,6 +7,8 @@ public class UserDTO {
 	private String password;
 	private String name;
 	private String email;
+	// campo informativo
+	private String error;
 	
 	public Long getId() {
 		return id;
@@ -41,6 +43,12 @@ public class UserDTO {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String getError() {
+		return error;
+	}
+	public void setError(String error) {
+		this.error = error;
 	}
 	
 }

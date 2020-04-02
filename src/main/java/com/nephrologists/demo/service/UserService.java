@@ -47,4 +47,17 @@ public class UserService implements IUserService{
 		return rta;
 	}
 
+	@Override
+	public UserModel findByLogin(String login) {
+		UserModel rta=null;
+		List<UserModel> listUser = findAll();
+		for(UserModel u:listUser) {
+			if(u.getLogin().equals(login)) {
+				rta = u;
+				break;
+			}
+		}
+		return rta;
+	}
+
 }

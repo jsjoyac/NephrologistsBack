@@ -12,5 +12,7 @@ public interface IUserBusiness {
 	
 	public UserDTO consultarUsuario(Long id);	
 	
+	public UserDTO consultarUsuarioPorLogin(String login);
+	
 	public Boolean borrarUsuario(Long id);	
 }

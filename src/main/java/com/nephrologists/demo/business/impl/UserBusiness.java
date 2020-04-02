@@ -3,6 +3,7 @@ package com.nephrologists.demo.business.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Service;
 
 import com.nephrologists.demo.business.IUserBusiness;
@@ -13,6 +14,7 @@ import com.nephrologists.demo.service.interfaces.IUserService;
 
 
 @Service
+@Configurable
 public class UserBusiness implements IUserBusiness{
 		
 	private IUserService iUserService;
@@ -45,6 +47,12 @@ public class UserBusiness implements IUserBusiness{
 	@Override
 	public Boolean borrarUsuario(Long id) {
 		return iUserService.deleteById(id);	
+	}
+
+	@Override
+	public UserDTO consultarUsuarioPorLogin(String login) {
+		UserFacade UserFacade = new UserFacade();
+		return UserFacade.obtenerUserDTO(iUserService.findByLogin(login));
 	}
 	
 }
