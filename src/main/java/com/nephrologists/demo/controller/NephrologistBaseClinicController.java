@@ -30,7 +30,7 @@ public class NephrologistBaseClinicController {
 		this.iNephrologistBaseClinicBusiness = NephrologistBaseClinicBusiness;
 	}
 
-	@GetMapping(value="/consultar/nefrologos")
+	@GetMapping(value="/consultar/nefrologosBaseClinica")
 	public List<NephrologistBaseClinicDTO> findAll() {
 		return iNephrologistBaseClinicBusiness.consultarNefrologosBaseClinica();		 
 	}

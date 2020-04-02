@@ -5,9 +5,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-//import org.junit.Before;
-//import org.junit.Test;
-//import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
@@ -18,28 +15,28 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.nephrologists.demo.controller.CityController;
+import com.nephrologists.demo.controller.NephrologistController;
 
 @RunWith(MockitoJUnitRunner.class)
-@ContextConfiguration(classes =  {CityController.class})
-public class CityControllerTest {
+@ContextConfiguration(classes =  {NephrologistController.class})
+public class NephrologistControllerTest {
 	
 	/** The mock mvc. */
 	private MockMvc mockMvc;
 	
 	@Mock
-	private CityController cityController;
+	private NephrologistController nephrologistController;
 	
 	
 	@Before
 	public void setup() {
-		this.mockMvc = MockMvcBuilders.standaloneSetup(cityController).build();
+		this.mockMvc = MockMvcBuilders.standaloneSetup(nephrologistController).build();
 		MockitoAnnotations.initMocks(this);
 	}
 	
 	@Test
-	public void verifyCityList() throws Exception {
-		mockMvc.perform(MockMvcRequestBuilders.get("/city/consultar/ciudades")
+	public void verifyNephrologistList() throws Exception {
+		mockMvc.perform(MockMvcRequestBuilders.get("/nephrologist/consultar/nefrologos")
 		.accept(MediaType.APPLICATION_JSON))
 		.andExpect(MockMvcResultMatchers.status().isOk())
 		.andDo(print());
